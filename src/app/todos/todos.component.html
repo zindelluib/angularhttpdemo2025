@@ -1,0 +1,19 @@
+<h1>Todos</h1>
+<p>Total no of todos :  {{ todos.length }}</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos">
+            <td>{{ todo.id}}</td>
+            <td>{{ todo.title }}</td>
+            <td *ngIf="todo.completed">Yes</td>
+            <td *ngIf="!todo.completed">No</td>
+        </tr>
+    </tbody>
+</table>
